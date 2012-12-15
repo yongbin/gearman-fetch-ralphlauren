@@ -1,0 +1,9 @@
+#!/bin/sh
+
+PWD=`pwd`
+
+~/brew/sbin/gearmand    -l $PWD/gearmand.log \
+                        --verbose INFO \
+                        -q libsqlite3 \
+                        --libsqlite3-db $PWD/queue.db
+                        #--http-port 8888
